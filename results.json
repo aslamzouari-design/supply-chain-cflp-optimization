@@ -1,0 +1,465 @@
+{
+  "generated_at_utc": "2026-10-09T01:48:02.689391+00:00",
+  "parameters": {
+    "port": "Genes (port)",
+    "inbound_eur_pal_km": 0.051515151515151514,
+    "outbound_eur_pal_km": 0.14,
+    "circuity": 1.25,
+    "total_demand_pal_year": 81900,
+    "inbound_precision_note": "Le texte indique 0,052 ; l'annexe utilise 1,70 / 33 = 0,051515…",
+    "port_to_depot_km": {
+      "Hamburg": 1274.1069341608645,
+      "Hannover": 1108.8317497882294,
+      "Dortmund": 996.1114357341817,
+      "Kassel": 960.519928482873,
+      "Frankfurt": 792.6134542967803,
+      "Erfurt": 933.9766210104333,
+      "Nuernberg": 729.5639217227808,
+      "Mannheim": 707.4315275446313,
+      "Ulm": 563.797403836204
+    }
+  },
+  "model": {
+    "variables": 198,
+    "constraints": 219
+  },
+  "solver": {
+    "name": "CBC",
+    "pulp_version": "3.3.0",
+    "status": "Optimal",
+    "solution_status": "Optimal Solution Found",
+    "optimality_proven": true,
+    "feasible_solution_available": true,
+    "elapsed_seconds": 0.07913543099994058,
+    "time_limit_seconds": 120,
+    "relative_gap": 0.0,
+    "gap_basis": "Optimum prouvé par CBC (tolérances numériques du solveur)",
+    "log": "Welcome to the CBC MILP Solver \nVersion: 2.10.3 \nBuild Date: Dec 15 2019 \n\ncommand line - /workspace/.venvs/supply-chain-cflp/lib/python3.12/site-packages/pulp/apis/../solverdir/cbc/linux/i64/cbc /tmp/7a98d694e9534d638f8e7c6909a925b8-pulp.mps -sec 120 -ratio 0 -allow 0 -threads 1 -timeMode elapsed -branch -printingOptions all -solution /tmp/7a98d694e9534d638f8e7c6909a925b8-pulp.sol (default strategy 1)\nAt line 2 NAME          MODEL\nAt line 3 ROWS\nAt line 224 COLUMNS\nAt line 1584 RHS\nAt line 1804 BOUNDS\nAt line 2003 ENDATA\nProblem MODEL has 219 rows, 198 columns and 765 elements\nCoin0008I MODEL read with 0 errors\nseconds was changed from 1e+100 to 120\nratioGap was changed from 0 to 0\nallowableGap was changed from 1e-10 to 0\nthreads was changed from 0 to 1\nOption for timeMode changed from cpu to elapsed\nContinuous objective value is 6.61729e+06 - 0.00 seconds\nCgl0004I processed model has 219 rows, 198 columns (198 integer (198 of which binary)) and 765 elements\nCbc0038I Initial state - 19 integers unsatisfied sum - 8.60377\nCbc0038I Pass   1: suminf.    2.87624 (8) obj. 6.86969e+06 iterations 84\nCbc0038I Solution found of 7.13102e+06\nCbc0038I Rounding solution of 6.95244e+06 is better than previous of 7.13102e+06\n\nCbc0038I Before mini branch and bound, 176 integers at bound fixed and 0 continuous\nCbc0038I Full problem 219 rows 198 columns, reduced to 14 rows 13 columns\nCbc0038I Mini branch and bound improved solution from 6.95244e+06 to 6.74211e+06 (0.01 seconds)\nCbc0038I Round again with cutoff of 6.72963e+06\nCbc0038I Reduced cost fixing fixed 54 variables on major pass 2\nCbc0038I Pass   2: suminf.    5.01094 (15) obj. 6.72963e+06 iterations 54\nCbc0038I Pass   3: suminf.    5.40278 (11) obj. 6.72963e+06 iterations 12\nCbc0038I Pass   4: suminf.    6.70473 (17) obj. 6.72963e+06 iterations 44\nCbc0038I Pass   5: suminf.    4.96705 (19) obj. 6.72963e+06 iterations 31\nCbc0038I Pass   6: suminf.    3.38970 (15) obj. 6.72963e+06 iterations 19\nCbc0038I Pass   7: suminf.    2.93675 (15) obj. 6.72963e+06 iterations 3\nCbc0038I Pass   8: suminf.    5.48037 (15) obj. 6.72963e+06 iterations 12\nCbc0038I Pass   9: suminf.    5.01094 (15) obj. 6.72963e+06 iterations 2\nCbc0038I Pass  10: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 7\nCbc0038I Pass  11: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 2\nCbc0038I Pass  12: suminf.    7.04831 (16) obj. 6.72963e+06 iterations 24\nCbc0038I Pass  13: suminf.    4.73826 (15) obj. 6.72963e+06 iterations 18\nCbc0038I Pass  14: suminf.    4.73826 (15) obj. 6.72963e+06 iterations 0\nCbc0038I Pass  15: suminf.    5.01094 (15) obj. 6.72963e+06 iterations 16\nCbc0038I Pass  16: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 7\nCbc0038I Pass  17: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 4\nCbc0038I Pass  18: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 11\nCbc0038I Pass  19: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 11\nCbc0038I Pass  20: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 13\nCbc0038I Pass  21: suminf.    4.94889 (15) obj. 6.72963e+06 iterations 30\nCbc0038I Pass  22: suminf.    1.73901 (13) obj. 6.72963e+06 iterations 25\nCbc0038I Pass  23: suminf.    1.73901 (13) obj. 6.72963e+06 iterations 2\nCbc0038I Pass  24: suminf.    5.48037 (15) obj. 6.72963e+06 iterations 19\nCbc0038I Pass  25: suminf.    5.01094 (15) obj. 6.72963e+06 iterations 2\nCbc0038I Pass  26: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 8\nCbc0038I Pass  27: suminf.    6.12901 (13) obj. 6.72963e+06 iterations 1\nCbc0038I Pass  28: suminf.    5.17420 (16) obj. 6.72963e+06 iterations 25\nCbc0038I Pass  29: suminf.    6.17494 (13) obj. 6.72963e+06 iterations 21\nCbc0038I Pass  30: suminf.    6.17494 (13) obj. 6.72963e+06 iterations 1\nCbc0038I Pass  31: suminf.    5.01094 (15) obj. 6.72963e+06 iterations 12\nCbc0038I No solution found this major pass\nCbc0038I Before mini branch and bound, 164 integers at bound fixed and 0 continuous\nCbc0038I Full problem 219 rows 198 columns, reduced to 19 rows 21 columns\nCbc0038I Mini branch and bound did not improve solution (0.03 seconds)\nCbc0038I After 0.03 seconds - Feasibility pump exiting with objective of 6.74211e+06 - took 0.03 seconds\nCbc0012I Integer solution of 6742111.8 found by feasibility pump after 0 iterations and 0 nodes (0.03 seconds)\nCbc0038I Full problem 219 rows 198 columns, reduced to 11 rows 10 columns\nCbc0031I 5 added rows had average density of 65.4\nCbc0013I At root node, 5 cuts changed objective from 6617293.1 to 6694596.5 in 8 passes\nCbc0014I Cut generator 0 (Probing) - 0 row cuts average 0.0 elements, 11 column cuts (11 active)  in 0.002 seconds - new frequency is 1\nCbc0014I Cut generator 1 (Gomory) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.002 seconds - new frequency is -100\nCbc0014I Cut generator 2 (Knapsack) - 3 row cuts average 21.7 elements, 0 column cuts (0 active)  in 0.001 seconds - new frequency is 1\nCbc0014I Cut generator 3 (Clique) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.000 seconds - new frequency is -100\nCbc0014I Cut generator 4 (MixedIntegerRounding2) - 9 row cuts average 28.4 elements, 0 column cuts (0 active)  in 0.001 seconds - new frequency is 1\nCbc0014I Cut generator 5 (FlowCover) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.000 seconds - new frequency is -100\nCbc0014I Cut generator 6 (TwoMirCuts) - 118 row cuts average 70.6 elements, 0 column cuts (0 active)  in 0.008 seconds - new frequency is 1\nCbc0010I After 0 nodes, 1 on tree, 6742111.8 best solution, best possible 6701426.5 (0.07 seconds)\nCbc0030I Thread 0 used 2 times,  waiting to start 0.00047326088, 0.000993 cpu time, 8 locks, 0.00010275841 locked, 0 waiting for locks\nCbc0030I Main thread 0.0011119843 waiting for threads,  8 locks, 6.9141388e-06 locked, 9.5367432e-07 waiting for locks\nCbc0001I Search completed - best objective 6742111.797645698, took 254 iterations and 2 nodes (0.07 seconds)\nCbc0032I Strong branching done 144 times (2780 iterations), fathomed 0 nodes and fixed 8 variables\nCbc0035I Maximum depth 0, 69 variables fixed on reduced cost\nCuts at root node changed objective from 6.61729e+06 to 6.70143e+06\nProbing was tried 16 times and created 11 cuts of which 0 were active after adding rounds of cuts (0.004 seconds)\nGomory was tried 16 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.004 seconds)\nKnapsack was tried 16 times and created 6 cuts of which 0 were active after adding rounds of cuts (0.002 seconds)\nClique was tried 16 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)\nMixedIntegerRounding2 was tried 16 times and created 18 cuts of which 0 were active after adding rounds of cuts (0.002 seconds)\nFlowCover was tried 16 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)\nTwoMirCuts was tried 16 times and created 236 cuts of which 0 were active after adding rounds of cuts (0.016 seconds)\nZeroHalf was tried 2 times and created 0 cuts of which 0 were active after adding rounds of cuts (0.000 seconds)\n\nResult - Optimal solution found\n\nObjective value:                6742111.79764570\nEnumerated nodes:               2\nTotal iterations:               254\nTime (CPU seconds):             0.07\nTime (Wallclock seconds):       0.07\n\nOption for printingOptions changed from normal to all\nTotal time (CPU seconds):       0.07   (Wallclock seconds):       0.07\n\n"
+  },
+  "open_warehouses": [
+    "Kassel",
+    "Nuernberg",
+    "Ulm"
+  ],
+  "open_warehouse_count": 3,
+  "assignments": [
+    {
+      "client": "Wolfsburg (VW)",
+      "demand_pal_year": 7800,
+      "warehouse": "Kassel"
+    },
+    {
+      "client": "Emden (VW)",
+      "demand_pal_year": 3200,
+      "warehouse": "Kassel"
+    },
+    {
+      "client": "Bremen (Mercedes)",
+      "demand_pal_year": 4600,
+      "warehouse": "Kassel"
+    },
+    {
+      "client": "Koeln (Ford)",
+      "demand_pal_year": 3900,
+      "warehouse": "Kassel"
+    },
+    {
+      "client": "Saarlouis (Ford)",
+      "demand_pal_year": 2100,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Ruesselsheim (Opel)",
+      "demand_pal_year": 2800,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Sindelfingen (Mercedes)",
+      "demand_pal_year": 7200,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Neckarsulm (Audi)",
+      "demand_pal_year": 3600,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Ingolstadt (Audi)",
+      "demand_pal_year": 6900,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Muenchen (BMW)",
+      "demand_pal_year": 5200,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Dingolfing (BMW)",
+      "demand_pal_year": 6100,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Regensburg (BMW)",
+      "demand_pal_year": 3800,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Leipzig (BMW/Porsche)",
+      "demand_pal_year": 4400,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Zwickau (VW)",
+      "demand_pal_year": 3300,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Eisenach (Opel)",
+      "demand_pal_year": 1900,
+      "warehouse": "Kassel"
+    },
+    {
+      "client": "Schweinfurt (ZF)",
+      "demand_pal_year": 2600,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Herzogenaurach (Schaeffler)",
+      "demand_pal_year": 2300,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Bamberg (Bosch)",
+      "demand_pal_year": 2000,
+      "warehouse": "Nuernberg"
+    },
+    {
+      "client": "Friedrichshafen (ZF)",
+      "demand_pal_year": 2400,
+      "warehouse": "Ulm"
+    },
+    {
+      "client": "Salzgitter (VW)",
+      "demand_pal_year": 2700,
+      "warehouse": "Kassel"
+    },
+    {
+      "client": "Baunatal (VW)",
+      "demand_pal_year": 3100,
+      "warehouse": "Kassel"
+    }
+  ],
+  "warehouses": [
+    {
+      "name": "Kassel",
+      "capacity_pal_year": 35000,
+      "load_pal_year": 27200,
+      "utilization_percent": 77.71428571428571,
+      "client_count": 7,
+      "clients": [
+        "Wolfsburg (VW)",
+        "Emden (VW)",
+        "Bremen (Mercedes)",
+        "Koeln (Ford)",
+        "Eisenach (Opel)",
+        "Salzgitter (VW)",
+        "Baunatal (VW)"
+      ]
+    },
+    {
+      "name": "Nuernberg",
+      "capacity_pal_year": 40000,
+      "load_pal_year": 24500,
+      "utilization_percent": 61.25,
+      "client_count": 7,
+      "clients": [
+        "Dingolfing (BMW)",
+        "Regensburg (BMW)",
+        "Leipzig (BMW/Porsche)",
+        "Zwickau (VW)",
+        "Schweinfurt (ZF)",
+        "Herzogenaurach (Schaeffler)",
+        "Bamberg (Bosch)"
+      ]
+    },
+    {
+      "name": "Ulm",
+      "capacity_pal_year": 35000,
+      "load_pal_year": 30200,
+      "utilization_percent": 86.28571428571429,
+      "client_count": 7,
+      "clients": [
+        "Saarlouis (Ford)",
+        "Ruesselsheim (Opel)",
+        "Sindelfingen (Mercedes)",
+        "Neckarsulm (Audi)",
+        "Ingolstadt (Audi)",
+        "Muenchen (BMW)",
+        "Friedrichshafen (ZF)"
+      ]
+    }
+  ],
+  "costs_eur_year": {
+    "fixed": 1230000.0,
+    "inbound": 3143822.3498712904,
+    "handling": 441720.0,
+    "outbound": 1926569.4477743353,
+    "total": 6742111.797645625
+  },
+  "decision_variables": {
+    "y": {
+      "Hamburg": 0.0,
+      "Hannover": 0.0,
+      "Dortmund": 0.0,
+      "Kassel": 1.0,
+      "Frankfurt": 0.0,
+      "Erfurt": 0.0,
+      "Nuernberg": 1.0,
+      "Mannheim": 0.0,
+      "Ulm": 1.0
+    },
+    "x": {
+      "Wolfsburg (VW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Emden (VW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Bremen (Mercedes)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Koeln (Ford)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Saarlouis (Ford)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Ruesselsheim (Opel)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Sindelfingen (Mercedes)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Neckarsulm (Audi)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Ingolstadt (Audi)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Muenchen (BMW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Dingolfing (BMW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Regensburg (BMW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Leipzig (BMW/Porsche)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Zwickau (VW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Eisenach (Opel)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Schweinfurt (ZF)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Herzogenaurach (Schaeffler)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Bamberg (Bosch)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 1.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Friedrichshafen (ZF)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 0.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 1.0
+      },
+      "Salzgitter (VW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      },
+      "Baunatal (VW)": {
+        "Hamburg": 0.0,
+        "Hannover": 0.0,
+        "Dortmund": 0.0,
+        "Kassel": 1.0,
+        "Frankfurt": 0.0,
+        "Erfurt": 0.0,
+        "Nuernberg": 0.0,
+        "Mannheim": 0.0,
+        "Ulm": 0.0
+      }
+    }
+  },
+  "feasibility_checks_passed": true,
+  "reference_comparison": {
+    "reference_total_eur_rounded": 6742112,
+    "difference_from_rounded_reference_eur": -0.20235437527298927,
+    "total_matches_at_nearest_euro": true,
+    "open_warehouses_match": true,
+    "loads_and_client_counts_match": true,
+    "variable_count_matches": true,
+    "constraint_count_matches": true
+  }
+}
